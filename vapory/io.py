@@ -83,6 +83,8 @@ def render_povstring(string, outfile=None, height=None, width=None,
         import tempfile
         fd, pov_file = tempfile.mkstemp(suffix='.pov')
         os.close(fd)
+    else:
+        pov_file = tempfile
     with open(pov_file, 'w+') as f:
         f.write(string)
 
